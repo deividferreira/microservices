@@ -49,7 +49,7 @@ public class SecurityCredentialsConfig extends WebSecurityConfigurerAdapter {
   }
 
   @Bean
-  private PasswordEncoder passwordEncoder() {
+  PasswordEncoder passwordEncoder() {
     return new BCryptPasswordEncoder();
   }
   

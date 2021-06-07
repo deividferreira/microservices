@@ -1,1 +1,29 @@
+server:
+  port: 8083
 
+spring:
+  application:
+    name: auth
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+  jmx:
+    enabled: false
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/microservices?allowPublicKeyRetrieval=true&sslMode=DISABLED
+    username: root
+    password: password
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:8081/eureka/
+    fetch-registry: true
+    register-with-eureka: true
