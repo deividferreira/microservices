@@ -26,6 +26,7 @@
     <module>gateway</module>
     <module>core</module>
     <module>auth</module>
+    <module>token</module>
   </modules>
 
 	<dependencies>
