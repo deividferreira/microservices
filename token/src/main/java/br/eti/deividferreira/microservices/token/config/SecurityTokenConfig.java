@@ -1,4 +1,4 @@
-package br.eti.deividferreira.microservices.token.security.config;
+package br.eti.deividferreira.microservices.token.config;
 
 import static javax.servlet.http.HttpServletResponse.SC_UNAUTHORIZED;
 import static org.springframework.security.config.http.SessionCreationPolicy.STATELESS;
@@ -26,7 +26,7 @@ public class SecurityTokenConfig extends WebSecurityConfigurerAdapter {
       .and()
       .authorizeRequests()
         .antMatchers(jwtConfiguration.getLoginUrl()).permitAll()
-        .antMatchers("/course/admin/**").hasRole("ADMIN")
+        .antMatchers("/course/v1/admin/**").hasRole("ADMIN")
         .anyRequest().authenticated();
   }
   

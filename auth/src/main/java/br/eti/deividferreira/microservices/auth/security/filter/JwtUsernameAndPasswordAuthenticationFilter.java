@@ -21,7 +21,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 
 import br.eti.deividferreira.microservices.core.model.ApplicationUser;
 import br.eti.deividferreira.microservices.core.property.JwtConfiguration;
-import br.eti.deividferreira.microservices.token.security.creator.TokenCreator;
+import br.eti.deividferreira.microservices.token.creator.TokenCreator;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;

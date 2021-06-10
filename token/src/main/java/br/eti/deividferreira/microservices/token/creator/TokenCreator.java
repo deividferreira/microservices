@@ -1,4 +1,4 @@
-package br.eti.deividferreira.microservices.token.security.creator;
+package br.eti.deividferreira.microservices.token.creator;
 
 import java.security.KeyPair;
 import java.security.KeyPairGenerator;
@@ -76,8 +76,9 @@ public class TokenCreator {
       .claim("authorities", auth.getAuthorities()
         .stream()
         .map(GrantedAuthority::getAuthority)
-        .collect(Collectors.toList())
-      ).issuer("https://github.com/deividferreira/microservices")
+        .collect(Collectors.toList()))
+      .claim("userId", user.getId())
+      .issuer("https://github.com/deividferreira/microservices")
       .issueTime(new Date())
       .expirationTime(new Date(System.currentTimeMillis() + (jwtConfiguration.getExpiration() * 1000)))
       .build();

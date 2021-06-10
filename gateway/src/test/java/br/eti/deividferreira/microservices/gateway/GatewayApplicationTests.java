@@ -1,6 +1,6 @@
 package br.eti.deividferreira.microservices.gateway;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
