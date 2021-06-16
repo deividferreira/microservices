@@ -18,9 +18,16 @@
 	<properties>
 		<java.version>11</java.version>
 		<microservices-core.version>0.0.1-SNAPSHOT</microservices-core.version>
+		<microservices-token.version>0.0.1-SNAPSHOT</microservices-token.version>
 	</properties>
 
 	<dependencies>
+		<dependency>
+			<groupId>br.eti.deividferreira.microservices</groupId>
+			<artifactId>token</artifactId>
+			<version>${microservices-token.version}</version>
+		</dependency>
+
 		<dependency>
 			<groupId>br.eti.deividferreira.microservices</groupId>
 			<artifactId>core</artifactId>
